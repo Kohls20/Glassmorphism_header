@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2? família=Lato:wght@700edisplay=swap');
+@import url('https://fonts.googleapis.com/css2? família=Lato:wght@700&família=Open+Sans:wght@300&display=swap');
+
+body{
+    background: linear-gradient(to right, #55439E, #952FFF);
+}
+
+footer{
+    color: white;
+    text-align: center;
+    font-family: lato, sans-serif;
+}
+
+.conteiner-principal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*configurações os textos*/
+.textos{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    text-align: center;
+    color: white;
+}
+
+.textos h1{
+    width: 80%;
+    font-family: lato, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 60px;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+    
+}
+.textos p{
+    width: 70%;
+    font-family: Open Sans, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 32px;
+    margin-top: 0;
+    margin-bottom: 60px;
+}
+
+/*configurações do formulario para incerção do email*/
+.submit{
+    max-width: 420px;
+}
+
+.submit input{
+    width: 100%;
+    height: 80px;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    padding-left: 30px;
+}
+
+.submit input::placeholder{
+    font-family: lato;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 16px;
+    color: #cdbfd8;
+}
+
+.submit button{
+    width: 120px;
+    height: 60px;
+    background-color: #4f3aa7;
+    border-radius: 6px;
+    font-family: lato, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 16px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    position: relative;
+    top: -73px;
+    left: 170px;
+}
+
+/*configurações do cartão*/
+.cartao{
+    min-width: 400px;
+    max-height: 230px;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 40px 50px;
+}
+
+.cartao::before{
+    content: '';
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-right: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    border-radius: 20px 0 0 20px;
+}
+
+.cartao::after{
+    content: '';
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-left: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 50%;
+    box-sizing: border-box;
+    border-radius: 0 20px 20px 0;
+}
+
+.footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: lato,sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.title{
+    font-family: lato,sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 30px;
+    color:#ffffff;
+    margin-top: 0;
+}
+
+.codigo{
+    font-family: lato, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #ffffff;
+    
+    letter-spacing: 0.07em;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.chip{
+    width: 60px;
+    height: 43px;
+}
+
+/*configurações das imagens que ficam no fundo*/
+.img1{
+    position: absolute;
+    left: 20px;
+    bottom: 15px;
+    max-width: 200px;
+    z-index: -1;
+}
+.img2{
+    position: absolute;
+    top: 150px;
+    right: 0;
+    max-width: 350px;
+    z-index: -1;
+}
+.img3{
+    position: absolute;
+    max-width: 250px;
+    top: -100px;
+    left: -20px;
+    z-index: -1;
+}
+
+/*configurações que permitem a responsividade*/
+@media only screen and (max-width: 1200px) {
+
+    .conteiner-principal{
+        flex-direction: column;
+    }
+
+    .textos{
+        align-items: center;
+        width: 75%;
+    }
+
+    .submit input{
+        width: 390px;
+        height: 82px;
+    }
+
+    .submit button{
+        left: 140px;
+    }
+
+    .img1{
+        max-width: 280px;
+    }
+    .img2{
+        max-width: 400px;
+        top: 250px;
+    }
+    .img3{
+        max-width: 320px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+
+    .conteiner-principal{
+        height: 150vh;
+    }
+
+    .textos{
+        width: 85%;
+    }
+
+    .img1{
+        max-width: 250px;/*diferente*/bottom: -350px;
+    }
+
+    .img2{
+        max-width: 330px;/*diferente*/
+        top: 300px;
+    }
+    .img3{
+        max-width: 280px;/*diferente*/
+        
+    }
+}
+
+@media only screen and (max-width: 450px) {
+
+    .conteiner-principal{
+        height: 100vh;
+    }
+
+    .submit input{
+        width: 270px;
+        height: 55px;
+    }
+
+    .submit button{
+        width: 90px;
+        height: 44px;
+        left: 100px;
+        top: -52px;
+    }
+
+    .cartao, .cartao::after, .cartao::before{
+        display: none;
+    }
+
+    .img1{
+        max-width: 180px;
+        bottom: 5px;
+    }
+    .img2{
+        max-width: 230px;
+        top: 200px;
+    }
+}
